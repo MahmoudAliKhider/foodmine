@@ -14,6 +14,8 @@ foods:Food[] =[];
     activateRoute.params.subscribe((params)=>{
       if(params.searchTerm){
       this.foods=foodservice.getAllFoodBySearchTerm(params.searchTerm)
+      }else if(params.tag){
+       this.foods=foodservice.getAllFoodByTag(params.tag)
       }
       else{
      this.foods=foodservice.getAll();
