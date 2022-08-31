@@ -12,7 +12,7 @@ export class FoodServiceTsService {
   getAll():Food[]{
     return sampl_foods;
   }
-  foodBySearchTerm(searchTerm:string){
-    this.getAll().filter(food=> food.name.toLowerCase().includes(searchTerm.toLowerCase()))
+  getAllFoodBySearchTerm(searchTerm:string){
+   return this.getAll().filter(food=> food.name.toLowerCase().includes(searchTerm.toLowerCase()))
   }
 }
