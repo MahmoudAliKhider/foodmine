@@ -9,6 +9,7 @@ import { Food } from '../shared/models/food';
 })
 export class CartService {
 private cart:Cart = this.getCartTolocalStorage();
+//دي معمولي عشان جزء عدد الي فى  cart
 private cartSubject: BehaviorSubject<Cart>=new BehaviorSubject(this.cart);
   constructor() { }
   addToCart(food:Food){
