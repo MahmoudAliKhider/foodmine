@@ -15,7 +15,9 @@ food!:Food;
     private cartService:CartService,private router : Router) {
     activatedRoute.params.subscribe((params)=>{
     if(params.id){
-      this.food=foodservice.getFoodById(params.id)
+      foodservice.getFoodById(params.id).subscribe(serverFood=>{
+        this.food=serverFood
+      })
     }
     })
    }

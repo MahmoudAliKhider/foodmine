@@ -45,5 +45,5 @@ app.get('/api/foods/:foofId',(req,res)=>{
 
 const port=5000;
 app.listen((port),()=>{
-  console.log(`server connected to http://localhost ${port}`)
+  console.log(`server connected to http://localhost:${port}`)
 })
