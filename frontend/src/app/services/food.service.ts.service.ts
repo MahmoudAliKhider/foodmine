@@ -29,6 +29,6 @@ export class FoodServiceTsService {
     this.http.get<Food[]>(FOOD_BY_TAG_URL+tag)
   }
   getFoodById(foodId:string):Observable<Food>{
-  return this.http.get<Food>(FOOD_BY_ID_URL+foodId)
+    return this.http.get<Food>(FOOD_BY_ID_URL + foodId);
   }
 }
