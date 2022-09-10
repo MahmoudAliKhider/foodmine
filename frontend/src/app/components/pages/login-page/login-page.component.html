@@ -8,6 +8,11 @@
   <div>
     <input type="email" placeholder="Email" formControlName="email"/>
   </div>
+  <div class="error-list" *ngIf="fc.email.errors && isSubmited">
+    <div *ngIf="fc.email.errors.required">Shoud not empty</div>
+    <div *ngIf="fc.email.errors.email">Email is not be corrected </div>
+
+  </div>
  </div>
 
  <div class="input-container">
@@ -15,6 +20,12 @@
   <div>
     <input type="password" placeholder="Password" formControlName="password"/>
   </div>
+  <div class="error-list" *ngIf="fc.password.errors && isSubmited">
+    <div *ngIf="fc.password.errors.required">Shoud not empty</div>
+    
+
+  </div>
+
  </div>
  <div class="button">
   <button type="submit">Login</button>
