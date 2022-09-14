@@ -3,33 +3,21 @@
     <app-title title="Login"></app-title>
 
     <form [formGroup]="loginForm" (ngSubmit)="submit()">
-      <input-container label="Email">
-    <input type="email" placeholder="Email" formControlName="email"/>
+      <text-input
+      [control]="fc.email"
+      [showErrorsWhen]="isSubmited"
+      type="email"
+      label="Email">
+    </text-input>
 
-    <div class="error-list" *ngIf="fc.email.errors && isSubmited">
-      <div *ngIf="fc.email.errors.required">Shoud not empty</div>
-      <div *ngIf="fc.email.errors.email">Email is not be corrected </div>
+    <text-input
+    [control]="fc.password"
+    [showErrorsWhen]="isSubmited"
+    type="password"
+    label="Password">
+  </text-input>
 
-    </div>
-
-    </input-container>
- 
-
- <div class="input-container">
-  <label>Password</label>
-  <div>
-    <input type="password" placeholder="Password" formControlName="password"/>
-  </div>
-  <div class="error-list" *ngIf="fc.password.errors && isSubmited">
-    <div *ngIf="fc.password.errors.required">Shoud not empty</div>
-
-
-  </div>
-
- </div>
- <div class="button">
-  <button type="submit">Login</button>
- </div>
+  <default-button text="Login"></default-button>
 
     </form>
   </div>
