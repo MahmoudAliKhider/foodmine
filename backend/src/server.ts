@@ -5,6 +5,8 @@ import express from "express"
 import cors from 'cors'
 import foodRouter from "./routers/food.router"
 import userRouter from "./routers/user.router"
+import { dbconnect } from './configs/database.config';
+dbconnect();
 const app = express();
 app.use(express.json())
 app.use(cors(
