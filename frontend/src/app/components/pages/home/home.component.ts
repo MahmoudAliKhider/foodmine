@@ -25,9 +25,9 @@ let foodObservable : Observable<Food[]>
         })
       }
       else{
-        foodObservable=this.foodservice.getAll();
+        //foodObservable=this.foodservice.getAll();
 
-        foodObservable.subscribe((serverFood)=>{
+        this.foodservice.getAll().subscribe((serverFood)=>{
           this.foods=serverFood
         })
       }

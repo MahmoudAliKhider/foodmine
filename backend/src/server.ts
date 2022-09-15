@@ -39,8 +39,8 @@ app.get ('/api/foods/tag/:tagName',(req,res)=>{
 })
 
 
-app.get('/api/foods/:foofId',(req,res)=>{
-    const foodId = req.params.foofId;
+app.get('/api/foods/:foodId',(req,res)=>{
+    const foodId = req.params.foodId;
     const foods = sampl_foods.filter(food => food.id == foodId)
     res.send(foods)
 })
