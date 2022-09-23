@@ -38,7 +38,7 @@ private cartSubject: BehaviorSubject<Cart>=new BehaviorSubject(this.cart);
   this.setCartTolocalStorage();
 
   }
-  clearCaer(){
+  clearCaer(){  
     this.cart=new Cart();
   this.setCartTolocalStorage();
 
